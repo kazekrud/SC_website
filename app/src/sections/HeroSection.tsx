@@ -70,17 +70,22 @@ export default function HeroSection() {
       className="relative w-full overflow-hidden"
       style={{ height: '100vh' }}
     >
-      {/* Background Image */}
+      {/* Background Video */}
       <div
         ref={bgRef}
         className="absolute inset-0 w-full h-full"
         style={{ transform: 'scale(1.1)' }}
       >
-        <img
-            src={images.hero.bg}
-          alt="Sitka Cuve - Windswept dune landscape"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="/video/Hero_video1.webm" type="video/webm" />
+          <source src="/video/Hero_video1.mp4" type="video/mp4" />
+        </video>
         {/* Dark gradient overlay */}
         <div
           className="absolute inset-0"

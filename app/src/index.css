@@ -1,0 +1,101 @@
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/400-italic.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/dm-sans/300.css';
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 25% 8%;
+    --foreground: 40 8% 87%;
+    --card: 225 20% 14%;
+    --card-foreground: 40 8% 85%;
+    --popover: 225 20% 14%;
+    --popover-foreground: 40 8% 85%;
+    --primary: 225 25% 8%;
+    --primary-foreground: 40 8% 87%;
+    --secondary: 225 20% 14%;
+    --secondary-foreground: 40 8% 85%;
+    --muted: 225 15% 18%;
+    --muted-foreground: 40 5% 55%;
+    --accent: 42 55% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 225 15% 22%;
+    --input: 225 15% 22%;
+    --ring: 40 8% 87%;
+    --radius: 0.5rem;
+    --sidebar-background: 225 25% 10%;
+    --sidebar-foreground: 40 8% 85%;
+    --sidebar-primary: 42 55% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 225 20% 18%;
+    --sidebar-accent-foreground: 40 8% 85%;
+    --sidebar-border: 225 15% 22%;
+    --sidebar-ring: 42 55% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    @apply bg-cream text-charcoal font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .section-padding {
+    padding-top: clamp(80px, 12vh, 160px);
+    padding-bottom: clamp(80px, 12vh, 160px);
+  }
+  .content-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(24px, 5vw, 80px);
+    padding-right: clamp(24px, 5vw, 80px);
+  }
+  .caption-style {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .nav-link-style {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .button-style {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.0;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

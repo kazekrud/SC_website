@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ChevronDown } from 'lucide-react';
 import SocialIcons from '../components/SocialIcons';
 import { images } from '../lib/images';
 
